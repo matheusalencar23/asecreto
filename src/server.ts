@@ -5,7 +5,7 @@ import https from "https";
 import http from "http";
 import siteRoutes from "./routes/site";
 import adminRoutes from "./routes/admin";
-import { requestInterceptor } from "./utils/request-interceptor";
+import { requestInterceptor } from "./interceptors/request-interceptor";
 
 const app = express();
 
