@@ -3,9 +3,9 @@ import express from "express";
 import cors from "cors";
 import https from "https";
 import http from "http";
-import siteRoutes from "./routes/site";
-import adminRoutes from "./routes/admin";
-import { requestInterceptor } from "./interceptors/request-interceptor";
+import siteRoutes from "./routes/site.routes";
+import adminRoutes from "./routes/admin.routes";
+import { requestInterceptor } from "./interceptors/request.interceptor";
 
 const app = express();
 

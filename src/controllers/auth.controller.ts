@@ -1,6 +1,6 @@
 import { RequestHandler } from "express";
 import { z } from "zod";
-import * as auth from "../services/auth";
+import * as auth from "../services/auth.service";
 
 export const login: RequestHandler = (req, res) => {
   const loginSchema = z.object({
