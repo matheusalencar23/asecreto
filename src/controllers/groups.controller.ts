@@ -10,3 +10,13 @@ export const getAllByEventId: RequestHandler = async (req, res) => {
 
   res.json({ error: "Ocorreu um erro" });
 };
+
+export const getByIdAndEventId: RequestHandler = async (req, res) => {
+  const { id_event, id } = req.params;
+  const filters = { id: parseInt(id), id_event: parseInt(id_event) };
+  const group = await groupsService.filter(filters);
+
+  if (group) return res.json(group);
+
+  res.json({ error: "Ocorreu um erro" });
+};

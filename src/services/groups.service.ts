@@ -9,3 +9,12 @@ export const getAllByEventId = async (id_event: number) => {
     return false;
   }
 };
+
+type Filters = { id: number; id_event?: number };
+export const filter = async (filters: Filters) => {
+  try {
+    return await prisma.eventGroup.findFirst({ where: filters });
+  } catch (err) {
+    return false;
+  }
+};

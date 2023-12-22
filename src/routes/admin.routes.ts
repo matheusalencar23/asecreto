@@ -22,5 +22,10 @@ router.get(
   authController.validate,
   groupsController.getAllByEventId
 );
+router.get(
+  "/events/:id_event/groups/:id",
+  authController.validate,
+  groupsController.getByIdAndEventId
+);
 
 export default router;
